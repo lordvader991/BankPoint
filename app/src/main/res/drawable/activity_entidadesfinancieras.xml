@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202320"
+    tools:context=".Entidadesfinancieras">
+
+    <TextView
+        android:id="@+id/text_gallery"
+        android:layout_width="288dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bebasneue_regular"
+        android:gravity="center|end"
+        android:text="Entidades financieras"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.013"
+        tools:text="Entidades financieras" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="317dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_gallery"
+        app:srcCompat="@drawable/fondo_bcp1" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="317dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fondo_union2_editado"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="447dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="317dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fondo_bnb_exp"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="265dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="317dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fondo_economico_editado"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton16"
+        android:layout_width="317dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fondo_mercantil_editado"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="539dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton18"
+        android:layout_width="317dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fondo_ganadero_edit3"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="629dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
