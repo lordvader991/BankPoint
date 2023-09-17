@@ -15,8 +15,8 @@ public class Entidadesfinancieras extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_entidadesfinancieras);
         banco1 =findViewById(R.id.banco1);
         banco2 =findViewById(R.id.banco2);
@@ -120,9 +120,61 @@ public class Entidadesfinancieras extends AppCompatActivity {
         mostrarMapa(ubicacionesLugar4);
     }
     public void mostrarMapaLugar5 (View view){// Banco BNB
-
+        List<Ubicacion> ubicacionesLugar5 = new ArrayList<>();
+       /* ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());
+        ubicacionesLugar5.add(new Ubicacion());*/
+        mostrarMapa(ubicacionesLugar5);
     }
     public void mostrarMapaLugar6 (View view){ //Banco Economico
+        List<Ubicacion> ubicacionesLugar6 = new ArrayList<>();
+        ubicacionesLugar6.add(new Ubicacion(-17.715260, -63.166225, "Av El remanso"));
+        ubicacionesLugar6.add(new Ubicacion(-17.800527, -63.195131,"Av Grigotá"));
+        ubicacionesLugar6.add(new Ubicacion(-17.749973, -63.185313,"Hipermaxi Radial 26"));
+        ubicacionesLugar6.add(new Ubicacion(-17.774705, -63.165496,"A market 2do anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.737307, -63.153722, "Av Alemana 6to anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.751519, -63.163351,"Av Alemana 4to anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.822424, -63.145200,"Av Paurito"));
+        ubicacionesLugar6.add(new Ubicacion(-17.780210, -63.148144,"Av virgen de Cotoca 4to anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.818503, -63.200034,"4to anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.794931, -63.160899,"Hipermaxi 3 pasos al frente"));
+        ubicacionesLugar6.add(new Ubicacion(-17.757559, -63.166033,"Av Alemana Tercer y Cuarto anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.755359, -63.171943,"Av Beni"));
+        ubicacionesLugar6.add(new Ubicacion(-17.715263, -63.166181,"Av el Remanso"));
+        ubicacionesLugar6.add(new Ubicacion(-17.849698, -63.182609,"Av Santos Dumont"));
+        ubicacionesLugar6.add(new Ubicacion(-17.771585, -63.124547,"Hipermaxi Pampa de la isla"));
+        ubicacionesLugar6.add(new Ubicacion(-17.728470, -63.166400,"Hipermaxi 6to anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.772202, -63.188533,"Av Cristobal mendoza 2do anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.749437, -63.176234,"Las brisas"));
+        ubicacionesLugar6.add(new Ubicacion(-17.759757, -63.178234,"Hipermaxi 3er anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.768934, -63.171066,"Surtidor Bio Petrol"));
+        ubicacionesLugar6.add(new Ubicacion(-17.785502, -63.204234,"Av Roca y coronado"));
+        ubicacionesLugar6.add(new Ubicacion(-17.841967, -63.195830,"Hipermaxi Suc. España"));
+        ubicacionesLugar6.add(new Ubicacion(-17.765861, -63.159033,"Hipermaxi Mutualista"));
+        ubicacionesLugar6.add(new Ubicacion(-17.771631, -63.182269,"Av Monseñor Rivero"));
+        ubicacionesLugar6.add(new Ubicacion(-17.799595, -63.168679,"Av San Aurelio"));
+        ubicacionesLugar6.add(new Ubicacion(-17.773015, -63.154218,"Tercer Anillo Externo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.798991, -63.149627,"Av tres Pasos al frente 4to anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.788614, -63.187678,"Av Cañoto Primer Anillo"));
+        ubicacionesLugar6.add(new Ubicacion(-17.7863611,-63.185295,"Calle Camiri"));
+        ubicacionesLugar6.add(new Ubicacion(-17.7840495,-63.1835585,"Calle Ayacucho"));
+        ubicacionesLugar6.add(new Ubicacion(-17.756932, -63.200419,"Hipermaxi San Martin"));
+        ubicacionesLugar6.add(new Ubicacion(-17.827669, -63.225934,"Doble Via la Guardia"));
+        mostrarMapa(ubicacionesLugar6);
 
     }
 
