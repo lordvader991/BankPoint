@@ -97,7 +97,30 @@ public class Entidadesfinancieras extends AppCompatActivity {
         mostrarMapa(ubicacionesLugar2);
     }
     public void mostrarMapaLugar3 (View view){ //banco BCP
-
+        List<Ubicacion> ubicacionesLugar3 = new ArrayList<>();
+        ubicacionesLugar3.add(new Ubicacion(-17.782627207493658, -63.172503848082854, "sobre la avenida ARGOMOSA (Centro)"));
+        ubicacionesLugar3.add(new Ubicacion(-17.776703695152875, -63.173298391962845, "shopping fidalga por el avion pirata"));
+        ubicacionesLugar3.add(new Ubicacion(-17.78072798443872, -63.189111771586724, "Av. cañoto, entre buenos aires y florida"));
+        ubicacionesLugar3.add(new Ubicacion(-17.792825310245057, -63.185294038501446, "av. Irala Casco Viejo"));
+        ubicacionesLugar3.add(new Ubicacion(-17.798617809494868, -63.178926743631145, "Cine Center"));
+        ubicacionesLugar3.add(new Ubicacion(-17.789358938685165, -63.16214474851024, "terminal Bimodal"));
+        ubicacionesLugar3.add(new Ubicacion(-17.771326, -63.124664, "Hipermaxi pampa de la isla"));
+        ubicacionesLugar3.add(new Ubicacion(-17.7330504,-63.1696092, "Patio de Comidas Belen"));
+        ubicacionesLugar3.add(new Ubicacion(-17.749483, -63.176156, "Las Brisas"));
+        ubicacionesLugar3.add(new Ubicacion(-17.759927, -63.198875, "Av San Martín"));
+        ubicacionesLugar3.add(new Ubicacion(-17.7729421,-63.2042411, "Centro Comercial IC Norte"));
+        ubicacionesLugar3.add(new Ubicacion(-17.785064, -63.211889, "Hipermaxi Av Roca y Coronado"));
+        ubicacionesLugar3.add(new Ubicacion(-17.7980908,-63.1350641, "Hipermaxi Villa 1° de Mayo"));
+        ubicacionesLugar3.add(new Ubicacion(-17.775521, -63.182084, "Calle 24 de Septiembre"));
+        ubicacionesLugar3.add(new Ubicacion(-17.765076, -63.161030, "Av Mutualista"));
+        ubicacionesLugar3.add(new Ubicacion(-17.781782, -63.189081, "Av Cañoto"));
+        ubicacionesLugar3.add(new Ubicacion(-17.796582, -63.190766, "Av Grigotá 1er y 2do anillo"));
+        ubicacionesLugar3.add(new Ubicacion(-17.768347, -63.153268, "Av Paraguá entre 3er y 4to anillo"));
+        ubicacionesLugar3.add(new Ubicacion(-17.728842, -63.166336, "Hipermaxi 6to anillo"));
+        ubicacionesLugar3.add(new Ubicacion(-17.771173, -63.124526, "Av Virgen de Cotoca "));
+        ubicacionesLugar3.add(new Ubicacion(-17.789398, -63.162193, "Terminal  Bimodal"));
+        ubicacionesLugar3.add(new Ubicacion(-17.782664, -63.172458, "Av Argomosa 1er anillo"));
+        mostrarMapa(ubicacionesLugar3);
     }
     public void mostrarMapaLugar4 (View view){ //Banco Union
         List<Ubicacion> ubicacionesLugar4 = new ArrayList<>();
@@ -121,23 +144,27 @@ public class Entidadesfinancieras extends AppCompatActivity {
     }
     public void mostrarMapaLugar5 (View view){// Banco BNB
         List<Ubicacion> ubicacionesLugar5 = new ArrayList<>();
-       /* ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());
-        ubicacionesLugar5.add(new Ubicacion());*/
+        ubicacionesLugar5.add(new Ubicacion(-17.799042898511917, -63.169101907150484, "Av. Trompillo; Av. San Aurelio"));
+        ubicacionesLugar5.add(new Ubicacion(-17.79236810761178, -63.20484984790472, "Av Roque Aguilera"));
+        ubicacionesLugar5.add(new Ubicacion(-17.772966143593646, -63.20371024701743, "Av. Bush; Av Marcelo Tercero Bánzer"));
+        ubicacionesLugar5.add(new Ubicacion(-17.772171753849268, -63.18806807761079, "Av. Cristobal de Mendoza; Av. La Salle"));
+        ubicacionesLugar5.add(new Ubicacion(-17.7753104458073, -63.1797874150159, "Av. Uruguay; el centro, C/Celso Castedo"));
+        ubicacionesLugar5.add(new Ubicacion(-17.75025938198996, -63.16853925294954, "Av. Beni; 4to Anillo"));
+        ubicacionesLugar5.add(new Ubicacion(-17.732523396912125, -63.16887257654411, "Av. Sexto Anillo; Av. Banzer"));
+        ubicacionesLugar5.add(new Ubicacion(-17.74940184829504, -63.174700787350794, "Av. 4to Anillo; Av. Banzer"));
+        ubicacionesLugar5.add(new Ubicacion(-17.760860732937573, -63.16398474991176, "Av. 3to Anillo Externo; Entre Alemana y Mutualista"));
+        ubicacionesLugar5.add(new Ubicacion(-17.76219261694544, -63.16423494708072, "Av. 3to Anillo Interno; Entre Alemana y Mutualista"));
+        ubicacionesLugar5.add(new Ubicacion(-17.76655660107332, -63.16232727941956, "Av. Mutualista; Entre 2do y 3er Anillo"));
+        ubicacionesLugar5.add(new Ubicacion(-17.76712380311376, -63.156603155981806, "3to Anillo Ext ; Entre Mutualista y Paragua"));
+        ubicacionesLugar5.add(new Ubicacion(-17.781463349987295, -63.15342482035112, "Entre 3 Anillo Ext e Inter; Av. Virgen de cotoca"));
+        ubicacionesLugar5.add(new Ubicacion(-17.782332322752854, -63.16358429014352, "Av. Virgen de cotoca y 2do anillo"));
+        ubicacionesLugar5.add(new Ubicacion(-17.77691440402637, -63.1731749016729, "1er anillo; C/Berlin"));
+        ubicacionesLugar5.add(new Ubicacion(-17.783000040698802, -63.18391827654375, "C/ Junin y 21 de mayo (Centro)"));
+        ubicacionesLugar5.add(new Ubicacion(-17.7811616038332, -63.189094421308745, "Av. Cañoto; C/buenos aires"));
+        ubicacionesLugar5.add(new Ubicacion(-17.779613047326357, -63.193435735319824, "Av. 26 de Febrero; Av. Hernando Sanabria"));
+        ubicacionesLugar5.add(new Ubicacion(-17.756764046837123, -63.20037970511202, "Av. 4to Anillo; Av. San Martin"));
+        ubicacionesLugar5.add(new Ubicacion(-17.79755509799401, -63.191918548770744, "Av. Trompillo y Av. Grigota"));
+        ubicacionesLugar5.add(new Ubicacion(-17.812025874986155, -63.18176126595533, "Av. Santos Dumont; Av. Roque aguilera"));
         mostrarMapa(ubicacionesLugar5);
     }
     public void mostrarMapaLugar6 (View view){ //Banco Economico
