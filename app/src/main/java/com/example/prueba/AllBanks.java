@@ -23,9 +23,12 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import java.util.ArrayList;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class AllBanks extends FragmentActivity implements OnMapReadyCallback {
 
@@ -33,7 +36,12 @@ public class AllBanks extends FragmentActivity implements OnMapReadyCallback {
     private FusedLocationProviderClient fusedLocationProviderClient;
     private LocationCallback locationCallback;
     private boolean isFirstLocationUpdate = true;
-    private ArrayList<LatLng> coordinatesList; // ArrayList para almacenar las coordenadas
+    private HashMap<String, LatLng> coordinatesMap;
+    private HashMap <String, LatLng> union;
+    private HashMap <String, LatLng> bnb;
+    private HashMap <String, LatLng> economico;
+    private HashMap <String, LatLng> mercantil;
+    private HashMap <String, LatLng> ganadero;
     ImageView image1, image2;
 
     @Override
@@ -65,24 +73,72 @@ public class AllBanks extends FragmentActivity implements OnMapReadyCallback {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
-        coordinatesList = new ArrayList<>();
+        coordinatesMap = new HashMap<>();
+        coordinatesMap.put("sobre la avenida ARGOMOSA (Centro)", new LatLng(-17.782627207493658, -63.172503848082854));
+        coordinatesMap.put("shopping fidalga por el avion pirata", new LatLng(-17.77666063548545, -63.17332352256182));
+        coordinatesMap.put("av. Irala Casco Viejo",new LatLng(-17.792549343473127, -63.185273958744396));
+        coordinatesMap.put("Mega Center",new LatLng(-17.797333866919363, -63.178360970189225));
+        coordinatesMap.put("Hipermaxi pampa de la isla",new LatLng(-17.771326, -63.124664));
+        coordinatesMap.put("Patio de Comidas Belen",new LatLng(-17.7330504,-63.1696092));
+        coordinatesMap.put("Las Brisas",new LatLng(-17.749483, -63.176156));
+        coordinatesMap.put("Av San Martín",new LatLng(-17.759927, -63.198875));
+        coordinatesMap.put("Centro Comercial IC Norte",new LatLng(-17.7729421,-63.2042411));
+        coordinatesMap.put("Hipermaxi Av Roca y Coronado",new LatLng(-17.785064, -63.211889));
+        coordinatesMap.put("Hipermaxi Villa 1° de Mayo",new LatLng(-17.7980908,-63.1350641));
+        coordinatesMap.put("Calle 24 de Septiembre",new LatLng(-17.775521, -63.182084));
+        coordinatesMap.put("Av Mutualista",new LatLng(-17.765076, -63.161030));
+        coordinatesMap.put("Av Cañoto",new LatLng(-17.781782, -63.189081));
+        coordinatesMap.put("Av Grigotá 1er y 2do anillo",new LatLng(-17.796582, -63.190766));
+        coordinatesMap.put("Av Paraguá entre 3er y 4to anillo",new LatLng(-17.768347, -63.153268));
+        coordinatesMap.put("Hipermaxi 6to anillo",new LatLng(-17.728842, -63.166336));
+        coordinatesMap.put("Av Virgen de Cotoca ",new LatLng(-17.771173, -63.124526));
+        coordinatesMap.put("Terminal  Bimodal",new LatLng(-17.789398, -63.162193));
+        coordinatesMap.put("Av Argomosa 1er anillo",new LatLng(-17.782664, -63.172458));
 
-        coordinatesList.add(new LatLng(-17.728719,-63.166313)); //1 Hipermaxi Supercenter
-        coordinatesList.add(new LatLng(-17.755711,-63.2688879)); //2 Domingo Savio
-        coordinatesList.add(new LatLng(-17.8102584,-63.2082709));//3 Hipermaxi Las Palmas
-        coordinatesList.add(new LatLng(-17.781187,-63.3332507)); //4 Av cañoto
-        coordinatesList.add(new LatLng(-17.795368,-63.3048106)); //5 Hipermaxi roca y coronado
-        coordinatesList.add(new LatLng(-17.7748637,-63.1741118)); //6 Mercado Chacarrilla
-        coordinatesList.add(new LatLng(-17.7778833,-63.2093115)); //7 cerca al Cristo redentor
-        coordinatesList.add(new LatLng(-17.7824545,-63.1841092)); //8 Av melchor pinto
-        coordinatesList.add(new LatLng(-17.8096168,-63.2135569)); //9 4to anillo doble vía la guardia
-        coordinatesList.add(new LatLng(-17.795368,-63.1966639)); //10 Cerca feria barrio lindo
-        coordinatesList.add(new LatLng(-17.7941421,-63.209281)); //11 El trompillo
-        coordinatesList.add(new LatLng(-17.7457207,-63.1661523)); //12 Av Alemana entrando por calle 4
-        coordinatesList.add(new LatLng(-17.7794582,-63.1987071)); //13 Frente a cenetrop
-        coordinatesList.add(new LatLng(-17.7683284,-63.2054836)); //14 utepsa
-        coordinatesList.add(new LatLng(-17.795368,-63.1651211)); //15 Rotonda de la avenida Pedro marbán
-        coordinatesList.add(new LatLng(-17.7539743,-63.2001593)); //16 Ventura
+
+        union = new HashMap<>();
+        union.put("Av. Cañoto",new LatLng(-17.781158356263802, -63.189053070563055));
+        union.put("Av. Irala",new LatLng(-17.792060497455026, -63.17794603227116));
+        union.put("IC NORTE - Av. 3er anillo",new LatLng(-17.772952549274446, -63.203545269061294));
+        union.put("Av. Centenario",new LatLng(-17.77887193160621, -63.19124337872135));
+        union.put("Calle Libertad",new LatLng(-17.781926110903164, -63.18276224320779));
+        union.put("Avión Pirata",new LatLng(-17.77652618531688, -63.17325807117722));
+        union.put("Biopetrol Virgen de Cotoca",new LatLng(-17.781250343326764, -63.16365585595465));
+        union.put("Av. Tres pasos al frente",new LatLng(-17.794235924168344, -63.1606933971127));
+        union.put("Radial 12",new LatLng(-17.806880151482417, -63.17177707948146));
+        union.put("Ave Colectora",new LatLng(-17.822927303180492, -63.165494623563916));
+        union.put("Av. Santos Dumont",new LatLng(-17.814425, -63.182739));
+        union.put("Av. Grigotá",new LatLng(-17.799970386039934, -63.195690482373564));
+        union.put("Doble Via la Guardia",new LatLng(-17.80956847693758, -63.20826717345417));
+        union.put("Hipermaxi Supercenter",new LatLng(-17.728551, -63.166230));
+        union.put("Av Santos Dumont 5to anillo",new LatLng(-17.832985, -63.184659));
+        union.put("Av Viedma",new LatLng(-17.78343209077971, -63.171315037565215));
+
+        bnb = new HashMap<>();
+        bnb.put("Av. 4to Anillo; Av. Banzer",new LatLng(-17.74940184829504, -63.174700787350794));
+       /* bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());
+        bnb.put("",new LatLng());*/
+        economico = new HashMap<>();
+        mercantil = new HashMap<>();
+        ganadero = new HashMap<>();
+
 
 
         locationCallback = new LocationCallback() {
@@ -99,19 +155,61 @@ public class AllBanks extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        //BANCO BCP
+        for (Map.Entry<String, LatLng> entry : coordinatesMap.entrySet()) {
+            String locationName = entry.getKey();
+            LatLng latLng = entry.getValue();
 
-        if (coordinatesList != null) {
-            for (int i = 0; i < coordinatesList.size(); i++) {
-                LatLng latLng = coordinatesList.get(i);
-                mMap.addMarker(new MarkerOptions().position(latLng).title("Ubicación " + (i + 1))); // Título de cada Ubicación (empieza en 1)
-            }
+            MarkerOptions markerOptions = new MarkerOptions()
+                    .position(latLng)
+                    .title(locationName)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.bcpmarker));
 
-            LatLng firstLocation = coordinatesList.get(0);
+            mMap.addMarker(markerOptions);
+        }
+        if (!coordinatesMap.isEmpty()) {
+            LatLng firstLocation = coordinatesMap.values().iterator().next();
             mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(firstLocation, 15f));
         }
+
+        //BANCO UNION
+        for (Map.Entry<String, LatLng> entry : union.entrySet()) {
+            String locationName = entry.getKey();
+            LatLng latLng = entry.getValue();
+
+            MarkerOptions markerOptions1 = new MarkerOptions()
+                    .position(latLng)
+                    .title(locationName)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.unionmarker));
+
+            mMap.addMarker(markerOptions1);
+        }
+
+        if (!union.isEmpty()) {
+            LatLng firstLocation = union.values().iterator().next();
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(firstLocation, 15f));
+        }
+
+        //BANCO BNB
+        for (Map.Entry<String, LatLng> entry : bnb.entrySet()) {
+            String locationName = entry.getKey();
+            LatLng latLng = entry.getValue();
+
+            MarkerOptions markerOptions2 = new MarkerOptions()
+                    .position(latLng)
+                    .title(locationName)
+                    .icon(BitmapDescriptorFactory.fromResource(R.drawable.bnbmarker));
+
+            mMap.addMarker(markerOptions2);
+        }
+
+        if (!bnb.isEmpty()) {
+            LatLng firstLocation = bnb.values().iterator().next();
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(firstLocation, 15f));
+        }
+
         enableMyLocation();
     }
-
 
     private void enableMyLocation() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
@@ -125,7 +223,7 @@ public class AllBanks extends FragmentActivity implements OnMapReadyCallback {
     private void startLocationUpdates() {
         LocationRequest locationRequest = LocationRequest.create();
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
-        locationRequest.setInterval(1000); //aqui se modifica el delay de cuanto queremos que se actualice la ubicacion en milisegundos
+        locationRequest.setInterval(1000);
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
             fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null);
@@ -149,16 +247,13 @@ public class AllBanks extends FragmentActivity implements OnMapReadyCallback {
         }
     }
 
-    @Override //PARA QUE SE PAUSE LA APP Y NO CONSUMA DATOS
+    @Override
     protected void onPause() {
         super.onPause();
         stopLocationUpdates();
     }
 
-    private void stopLocationUpdates() { //IGUAL ESTO
+    private void stopLocationUpdates() {
         fusedLocationProviderClient.removeLocationUpdates(locationCallback);
     }
 }
-
-
-

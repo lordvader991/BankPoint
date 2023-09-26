@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">BankPoint</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_todos_los_bancos">TodosLosBancos</string>
 </resources>
